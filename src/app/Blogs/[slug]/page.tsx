@@ -1,10 +1,10 @@
 import { client } from "@/sanity/lib/client";
 import React from "react";
-import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
 import { PortableText } from "next-sanity";
-import { components } from "@/components/CustomComponent";
-import CommentSection from "@/components/CommentSection";
+import CommentSection from "@/app/components/CommentSection";
+import { components } from "@/app/components/CustomComponent";
+import Image from "next/image";
 
 const builder = imageUrlBuilder(client);
 
@@ -79,7 +79,7 @@ async function BlogPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </div>
-      <CommentSection />
+      <CommentSection/>
     </div>
   );
 }
